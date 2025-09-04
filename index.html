@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cava</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Navegación -->
+    <header class="navigation">
+        <div class="logo"></div>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Imagen principal -->
+    <section class="img-font">
+        <img src="imagenes/WhatsApp Image 2025-08-15 at 8.33.33 AM.jpeg" alt="Imagen Cava">
+    </section>
+
+    <!-- Contenido -->
+    <section class="contenedor">
+        <div class="columna-izquierda">
+            <h2>Nosotros</h2>
+            <p>
+                "Fundada en 2025 en Pereira, Risaralda, CAVA Contabilidad Legal nace para ofrecer soluciones integrales 
+                en contabilidad, asesoría tributaria y planeación financiera. Nuestro equipo se caracteriza por 
+                mantenerse actualizado en las normativas vigentes, garantizando un servicio confiable, preciso y 
+                adaptado a las necesidades de cada cliente. En CAVA nos enfocamos en que tu empresa cumpla con todos 
+                los requisitos legales y optimice sus recursos."
+            </p>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2852.490734116067!2d-75.726352226894!3d4.789694440883509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e387d84de8b7229%3A0xd505e861820ff36a!2sbarrio%20villa%20del%20carmen%20cuba!5e1!3m2!1ses-419!2sco!4v1755291349074!5m2!1ses-419!2sco"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+    <section class="carrusel">
+      <h2>Nuestros Servicios</h2>
+      <div class="carrusel-container">
+        <div class="carrusel-item">
+            <h3>Contabilidad y Estados Financieros</h3>
+        </div>
+          <div class="carrusel-item">
+            <h3>Asesoría Tributaria</h3>
+        </div>
+          <div class="carrusel-item">
+            <h3>Planeación Financiera</h3>
+        </div>
+          <div class="carrusel-item">
+            <h3>Cumplimiento Legal Contable</h3>
+        </div>
+         <div class="carrusel-item">
+            <h3>Auditorías y Revisiones Especiales</h3>
+        </div>
+      </div>
+      <button class="prev" onclick="mover(-1)">❮</button>
+      <button class="next" onclick="mover(1)">❯</button>
+    </section>
+
+<container class="contenedor">
+     <section class="formulario">
+        <form action="" name="formulario" method="post">
+            <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre" required>
+            <br>
+            <input type="email" name="email" id="email" maxlength="30" placeholder="Email" required>
+            <br>
+            <input type="number" name="telefono" id="telefono" maxlength="10" placeholder="Telefono" required>
+            <br>
+            <input type="text" name="mensaje" id="mensaje" maxlength="50" placeholder="Mensaje" required>
+            <br>
+            <input type="submit" name="boton" id="boton" value="Enviar">
+
+
+            <br>
+        </form>
+    </section>
+
+</container>
+   
+<footer>
+    <h3>todos los derechos reservados</h3>
+    <h3>Redes sociales</h3>
+</footer>
+    <!-- Script -->
+    <script src="js.js"></script>
+</body>
+</html>
