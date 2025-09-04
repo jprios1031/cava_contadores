@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cava</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     
-    <!-- Navegación -->
-    <header class="navigation">
-        <div class="logo"></div>
-        <button class="hamburger" onclick="toggleMenu()">☰</button>
-        <nav id="menu">
+    <header class="cabeza">
+        <div  class="logo">
+            <img src="imagenes/logo.jpg" alt="Logo CAVA">
+        </div>
+        <nav>
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Nosotros</a></li>
@@ -22,14 +23,8 @@
         </nav>
     </header>
 
-    <!-- Imagen principal -->
-    <section class="img-font">
-        <img src="imagenes/WhatsApp Image 2025-08-15 at 8.33.33 AM.jpeg" alt="Imagen Cava">
-    </section>
-
-    <!-- Contenido -->
-    <section class="contenedor">
-        <div class="columna-izquierda">
+<section class="contenedor">
+        <div>
             <h2>Nosotros</h2>
             <p>
                 "Fundada en 2025 en Pereira, Risaralda, CAVA Contabilidad Legal nace para ofrecer soluciones integrales 
@@ -38,60 +33,98 @@
                 adaptado a las necesidades de cada cliente. En CAVA nos enfocamos en que tu empresa cumpla con todos 
                 los requisitos legales y optimice sus recursos."
             </p>
-            <iframe 
+           
+        </div>
+        <!-- <div>
+            <h2>Mision</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sint voluptate excepturi incidunt, error id qui architecto tenetur esse eius impedit atque non, aspernatur adipisci iste quod corporis in aperiam?</p>
+           </div>
+             <div>
+            <h2>Vision</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sint voluptate excepturi incidunt, error id qui architecto tenetur esse eius impedit atque non, aspernatur adipisci iste quod corporis in aperiam?</p>
+            
+        </div> -->
+        </section>
+          <section>
+        <div>
+             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2852.490734116067!2d-75.726352226894!3d4.789694440883509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e387d84de8b7229%3A0xd505e861820ff36a!2sbarrio%20villa%20del%20carmen%20cuba!5e1!3m2!1ses-419!2sco!4v1755291349074!5m2!1ses-419!2sco"
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
-    </section>
-    <section class="carrusel">
-      <h2>Nuestros Servicios</h2>
-      <div class="carrusel-container">
-        <div class="carrusel-item">
-            <h3>Contabilidad y Estados Financieros</h3>
+  </section>
+        <section class="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Contabilidad</h3>
+            <p>Gestión integral de tu contabilidad con precisión y cumplimiento normativo.</p>
         </div>
-          <div class="carrusel-item">
+        <div class="card">
             <h3>Asesoría Tributaria</h3>
+            <p>Planeación fiscal y asesoría para optimizar tus recursos.</p>
         </div>
-          <div class="carrusel-item">
+        <div class="card">
             <h3>Planeación Financiera</h3>
+            <p>Proyecciones y estrategias para el crecimiento de tu empresa.</p>
         </div>
-          <div class="carrusel-item">
-            <h3>Cumplimiento Legal Contable</h3>
+           <div class="card">
+            <h3>Planeación Financiera</h3>
+            <p>Proyecciones y estrategias para el crecimiento de tu empresa.</p>
         </div>
-         <div class="carrusel-item">
-            <h3>Auditorías y Revisiones Especiales</h3>
+           <div class="card">
+            <h3>Planeación Financiera</h3>
+            <p>Proyecciones y estrategias para el crecimiento de tu empresa.</p>
         </div>
-      </div>
-      <button class="prev" onclick="mover(-1)">❮</button>
-      <button class="next" onclick="mover(1)">❯</button>
-    </section>
+           <div class="card">
+            <h3>Planeación Financiera</h3>
+            <p>Proyecciones y estrategias para el crecimiento de tu empresa.</p>
+        </div>
+           <div class="card">
+            <h3>Planeación Financiera</h3>
+            <p>Proyecciones y estrategias para el crecimiento de tu empresa.</p>
+        </div>
+           <div class="card">
+            <h3>Planeación Financiera</h3>
+            <p>Proyecciones y estrategias para el crecimiento de tu empresa.</p>
+        </div>
+    </div>
+</section>
 
-<container class="contenedor">
-     <section class="formulario">
-        <form action="" name="formulario" method="post">
-            <input type="text" name="nombre" id="nombre" maxlength="30" placeholder="Nombre" required>
-            <br>
-            <input type="email" name="email" id="email" maxlength="30" placeholder="Email" required>
-            <br>
-            <input type="number" name="telefono" id="telefono" maxlength="10" placeholder="Telefono" required>
-            <br>
-            <input type="text" name="mensaje" id="mensaje" maxlength="50" placeholder="Mensaje" required>
-            <br>
-            <input type="submit" name="boton" id="boton" value="Enviar">
+<section class="formulario">
+    <h2>Dejanos tus datos</h2>
+    <form action="index.php" method="post">
+
+     <label for="name">Nombre: </label>
+    <input type="text" placeholder="Escribe tu nombre" name="nombre" required>
+    <br>
+
+        <label for="telefono">Telefono: </label>
+        <input type="tel" name="telefono" placeholder="Escrite tu telefono" required>
+        <br>
 
 
-            <br>
-        </form>
-    </section>
-
-</container>
-   
+        <label for="correo">correo: </label>
+        <input type="email" placeholder="Escribe tu correo" name="correo" required>
+        <br>
+        <label for="mensaje">mensaje: </label>
+         <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        <button type="submit">Enviar</button>
+</form>
+</section>
+<section>
 <footer>
-    <h3>todos los derechos reservados</h3>
-    <h3>Redes sociales</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et perferendis deleniti ducimus, natus omnis facere consequuntur voluptates saepe? Asperiores quae quam enim ad facere architecto saepe voluptates in dolor mollitia.</label></p>
 </footer>
-    <!-- Script -->
+
+</section>
+
+    
+
+
+
+
+
     <script src="js.js"></script>
 </body>
 </html>
