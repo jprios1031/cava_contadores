@@ -1,20 +1,23 @@
 body {
-    background: linear-gradient(to top, white, #004AAD);
+background: linear-gradient(to top, white, #66a3ff, #004AAD);
     margin: 0;
     font-family: Arial, sans-serif;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
 
-    
 }
-
+.main-content {
+    flex: 1; /* Ocupa todo el espacio disponible */
+}
 
 .cabeza {
     display: flex;
     align-items: center; 
     justify-content: space-between; 
     padding: 10px 40px;
-    border: #000000;
-
+    gap:unset
 
 }
 
@@ -42,10 +45,39 @@ nav ul li a {
 }
 .contenedor {
 text-align: center;
- color: #ffffff;
+  color: #ffffff;
+  min-height: 500px; /* ahora crece si el texto es más largo */
+  position: relative;
+  padding: 100px 20px; /* más espacio arriba y abajo */
+  background-image: url("imagenes/ChatGPT Image 5 sept 2025, 10_22_17 a.m..png");
+  background-size: cover;
+  background-position: center center; /* centra mejor la imagen */
+  background-attachment: fixed; /* efecto parallax elegante */
+  border-radius: solid 2px blue;
 }
 
+.contenedor::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* más oscuro que antes */
+  z-index: 1;
+}
 
+.contenedor .contenido {
+  position: relative;
+  z-index: 2;
+  max-width: 800px; /* controla el ancho del párrafo */
+  margin: 0 auto;   /* centra horizontalmente */
+}
+.contenedor .contenido hr {
+  width: 80px;
+  height: 4px;
+  margin: 20px auto;
+  border: none;
+  background-color: #66a3ff; /* azul claro de tu paleta */
+  border-radius: 2px;
+}
 div iframe {
   width: 100%;   /* ocupa todo el ancho disponible */
   height: 500px; /* altura fija */
@@ -56,13 +88,12 @@ div iframe {
 .servicios {
     text-align: center;
     padding: 50px 20px;
-    background-color: #f9f9f9;
 
 }
 
 .servicios h2 {
     margin-bottom: 30px;
-    color: #004AAD;
+    color: #ffffff;
     
 }
 
@@ -74,19 +105,29 @@ div iframe {
 }
 
 .card {
-    background: white;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 20px;
     width: 250px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    background-color: #f9f9f9;
 }
 
+/* Animación al pasar el mouse, más suave */
 .card:hover {
-    transform: translateY(-5px);
+    animation: rotate-scale-hover s ease-in-out both;
     box-shadow: 0 8px 16px #004AAD;
-        border-radius:solid 2px #004AAD;
-
+    border: solid 2px #004AAD;
 }
+
+/* Definición de la animación más suave */
+@keyframes rotate-scale-hover {
+    0% { transform: scale(1) rotate(0deg); }
+    50% { transform: scale(1.05) rotate(5deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
+
+
 
 .card h3 {
     color: #004AAD;
@@ -98,7 +139,7 @@ div iframe {
     color: #333;
 }
 .formulario{
-  max-width:fit-content;
+  max-width:500px;
   margin: 20px auto;
   padding: 20px;
 }
@@ -116,7 +157,7 @@ div iframe {
   width: 100%;
   padding: 2%;
   margin-top: 5%;
-  border-radius: 0%;
+  border-radius: 5%;
 
 }
 .formulario button {
@@ -156,4 +197,163 @@ div iframe {
   .formulario {
     width: 90%;
   }
+}
+
+
+footer{
+    color: #000000;
+    padding: 40px 20px 20px 20px;
+    
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: row; /* horizontal, columnas */
+    justify-content: space-between; /* espacio entre las columnas */
+    flex-wrap: wrap; /* permite que se acomode en móviles */
+    gap: 20px; 
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cada sección del footer */
+.footer-section {
+    text-align: left; /* opcional: alinear contenido a la izquierda */
+    flex: 1 1 250px; /* ocupa el mismo ancho mínimo de 250px */
+    min-width: 200px; 
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #004AAD;
+}
+
+/* Redes sociales */
+.redes-sociales-footer a {
+  color: rgb(0, 0, 0);
+  margin-right: 15px;
+  font-size: 24px;
+  transition: transform 0.3s, color 0.3s;
+     transform: scale(1.3);
+    color: #004AAD;
+}
+
+.redes-sociales-footer a:hover {
+  transform: scale(1.2);
+  color: #004AAD;
+}
+
+/* Footer inferior */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* columnas se apilan en filas */
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+.hamburguesa{
+    display: none; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+}
+.hamburguesa span{
+    display: block;
+    height: 4px;
+    background-color: #ffffff;
+    border-radius: 2px
+}
+@media(max-width: 768px){
+    .hamburguesa{
+        display: flex;
+    }
+    nav ul{
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    nav ul.active{
+        display: flex;
+    }
+}
+
+
+.hamburguesa.active span:nth-child(1){
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburguesa.active span:nth-child(2){
+    opacity: 0;
+}
+.hamburguesa.active span:nth-child(3){
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+@media(max-width: 768px){
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    nav ul.active {
+        display: flex;
+    }
+}
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    z-index: 100;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+    overflow:auto;
+}
+
+.whatsapp-float i {
+    line-height: 60px;
 }

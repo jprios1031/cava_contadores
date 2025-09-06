@@ -1,11 +1,13 @@
 <?php
+$servidor = "localhost";
+$usuario = "root";
+$password = "";
+$base_datos = "datos_recibidos";
 
-$datos = array(
-    "Nombre" => array("juan"),
-    "Apellido" => array("rios"),
-    "Edad" => array(23)
+// Crear conexión
+$conn = new mysqli($servidor, $usuario, $password, $base_datos);
 
-
-);
-
-echo "$datos";
+// Verificar conexión
+if ($conn->connect_error) {
+    die("❌ Error en la conexión: " . $conn->connect_error);
+}
