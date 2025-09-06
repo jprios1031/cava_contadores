@@ -21,6 +21,16 @@ background: linear-gradient(to top, white, #66a3ff, #004AAD);
 
 }
 
+.cabeza-nosotros{
+ display: flex;
+   align-items: center; 
+   justify-content: space-between; 
+   padding: 10px 40px;
+   background: rgba(255, 255, 255, 0.2); /* transparente clara */
+   backdrop-filter: blur(4px);            /* efecto vidrio sutil */
+   border-bottom: 1px solid rgba(255,255,255,0.3); /* línea elegante */
+}
+
 
 header .logo img {
     height: 100px;
@@ -356,4 +366,100 @@ footer{
 
 .whatsapp-float i {
     line-height: 60px;
+}
+.hero {
+  min-height: 80vh; /* ocupa casi toda la pantalla */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-buttons .btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn {
+  background: #004AAD;
+  color: #fff;
+}
+
+.btn:hover {
+  background: #003080;
+}
+
+.btn-secundario {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-secundario:hover {
+  background: #fff;
+  color: #004AAD;
+}
+.testimonios {
+  text-align: center;
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.testimonios h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.testimonios-contenedor {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* se acomoda en móviles */
+}
+
+.testimonio {
+  background: rgba(255, 255, 255, 0.1); /* efecto transparente elegante */
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.testimonio p {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.testimonio h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #66a3ff;
 }
