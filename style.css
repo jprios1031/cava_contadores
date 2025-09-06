@@ -367,6 +367,46 @@ footer{
 .whatsapp-float i {
     line-height: 60px;
 }
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* HERO */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons .btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+
+  /* TESTIMONIOS */
+  .testimonios h2 {
+    font-size: 2rem;
+  }
+
+  .testimonios-contenedor {
+    flex-direction: column; /* de fila a columna */
+    align-items: center;    /* centra las tarjetas */
+    gap: 25px;
+  }
+
+  .testimonio {
+    max-width: 90%;  /* que no quede tan angosto */
+    padding: 15px;
+  }
+
+  .testimonio p {
+    font-size: 0.95rem;
+  }
+
+  .testimonio h4 {
+    font-size: 0.9rem;
+  }
+}
 .hero {
   min-height: 80vh; /* ocupa casi toda la pantalla */
   display: flex;
