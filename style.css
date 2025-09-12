@@ -1,3 +1,17 @@
+/* ========= ESTILOS GLOBALES ========= */
+body {
+  background: linear-gradient(to top, white, #66a3ff, #004AAD);
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Aquí van tus estilos generales (hero, cards, footer, etc.) */
+
+
+
 body {
 background: linear-gradient(to top, white, #66a3ff, #004AAD);
     margin: 0;
@@ -510,4 +524,84 @@ footer{
 }
 .rete-fuente h2{
   color: #ffffff;
+}
+
+
+/* ========= MEDIA QUERIES ========= */
+
+/* TABLETS Y MÓVILES GRANDES */
+@media (max-width: 992px) {
+  nav ul {
+    gap: 20px;
+  }
+
+  .cards {
+    gap: 15px;
+  }
+}
+
+/* MÓVILES */
+@media (max-width: 768px) {
+  header.cabeza {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  iframe {
+    height: 300px;
+  }
+
+  .formulario {
+    width: 90%;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-buttons .btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+
+  .testimonios h2 {
+    font-size: 2rem;
+  }
+
+  .testimonios-contenedor {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .testimonio {
+    max-width: 90%;
+    padding: 15px;
+  }
 }
