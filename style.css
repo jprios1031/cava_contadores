@@ -162,7 +162,7 @@ div iframe {
     font-size: 14px;
     color: #333;
 }
-.formulario{
+/* .formulario{
   max-width:500px;
   margin: 20px auto;
   padding: 20px;
@@ -195,8 +195,8 @@ div iframe {
   cursor: pointer;
 }
 .formulario button:hover {
-  background: #000000;
-}
+  background: #8d1c1c;
+} */
 @media (max-width: 768px) {
   header.cabeza {
     flex-direction: column;
@@ -518,12 +518,13 @@ footer{
   color: #66a3ff;
 }
 .rete-fuente{
-  text-align: center;
   color: #004AAD;
+  text-align: center; 
+  justify-content: center;
 
 }
-.rete-fuente h2{
-  color: #ffffff;
+.rete-fuente h2, h3{
+  color: #f9f9f9;
 }
 
 

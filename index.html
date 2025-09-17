@@ -9,25 +9,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="imagenes/favicon.png" type="image/png">
     <meta name="description" content="Cava - Servicios profesionales en [tu área]. Conócenos y contáctanos.">
-<meta name="keywords" content="Cava, servicios, desarrollo, Pereira, Risaralda">
-<meta name="author" content="Cava">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-
-
-
+    <meta name="keywords" content="Cava, servicios, desarrollo, Pereira, Risaralda">
+    <meta name="author" content="Cava">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 <body>
     <div class="main-content"></div>
     <header class="cabeza">
-        <div  class="logo">
-            <img src="imagenes/logo.jpg" alt="Logo CAVA">
+        <div class="logo">
+            <img src="imagenes/logo.jpg" alt="Logo Cava">
         </div>
-         <div class="hamburguesa" id="menu-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
+        <div class="hamburguesa" id="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <nav>
             <ul id="menu">
                 <li><a href="index.html">Inicio</a></li>
@@ -48,11 +44,67 @@
     </div>
   </div>
 </section>
-       <section class="testimonios">
+
+<section class="rete-fuente">
+  <h2>🛠️ Herramientas en línea</h2>
+  <p>Aquí encontrarás calculadoras diseñadas para hacer tus operaciones más fáciles y rápidas:</p>
+
+  <label for="herramienta">Selecciona una calculadora:</label>
+  <select id="herramienta">
+    <option value="">-- Elige una opción --</option>
+    <option value="retefuente">Calculadora de Retefuente</option>
+    <option value="uvt">Calculadora UVT</option>
+    <option value="prima">Calculadora de Prima</option>
+  </select>
+
+  <!-- Retefuente -->
+  <form id="retefuente" class="calculadora" style="display:none;">
+    <h3>Calculadora de Retención en la Fuente</h3>
+    <p>Te permite estimar de forma sencilla el valor de la retención en la fuente que se aplica a tu salario o ingresos, ayudándote a planificar mejor tus finanzas.</p>
+
+    <label for="ingreso">Ingrese el valor de su ingreso:</label><br>
+    <input type="number" name="ingreso" id="ingreso"><br>
+
+    <label for="deducciones">Deducciones:</label><br>
+    <input type="number" name="deducciones" id="deducciones"><br>
+
+    <input type="button" value="Calcular" id="calcular">
+    <div id="resultado"></div>
+  </form>
+
+  <!-- UVT -->
+  <form id="uvt" class="calculadora" style="display:none;">
+    <h3>Calculadora UVT</h3>
+    <p>Convierte un valor en pesos a Unidades de Valor Tributario (UVT), una herramienta clave para entender y simplificar tus obligaciones tributarias en Colombia.</p>
+
+    <label for="valor">Ingrese un valor en pesos:</label><br>
+    <input type="number" id="valor"><br>
+
+    <input type="button" value="Convertir UVT" id="ConvertirUVT">
+    <div id="resultado-uvt"></div>
+  </form>
+
+  <!-- Prima -->
+  <form id="prima" class="calculadora" style="display:none;">
+    <h3>Calculadora de Prima</h3>
+    <p>Ideal para calcular el valor aproximado de tu prima semestral según los días trabajados y tu salario, dándote una visión clara de este beneficio laboral.</p>
+
+    <label for="salario">Salario mensual:</label><br>
+    <input type="number" id="salario"><br>
+
+    <label for="dias">Días trabajados:</label><br>
+    <input type="number" id="dias"><br>
+
+    <input type="button" value="Calcular Prima" id="calculoPrima">
+    <div id="resultado-prima"></div>
+  </form>
+</section>
+
+<section class="testimonios">
   <h2>Lo que dicen nuestros clientes</h2>
   <div class="testimonios-contenedor">
     <div class="testimonio">
-      <p>"CAVA nos ayudó a organizar toda la contabilidad de nuestra empresa. Ahora tenemos claridad financiera y más tiempo para enfocarnos en crecer."</p>
+      <p>"Cava nos ayudó a organizar toda la contabilidad de nuestra empresa. Ahora tenemos claridad financiera y más tiempo para enfocarnos en crecer."</p>
       <h4>- María López, Empresaria</h4>
     </div>
     <div class="testimonio">
@@ -60,37 +112,10 @@
       <h4>- Carlos Ramírez, Gerente</h4>
     </div>
     <div class="testimonio">
-      <p>"Gracias a su planeación financiera, logramos tomar mejores decisiones estratégicas para el futuro de nuestra compañía."</p>
+      <p>"Gracias a su planeación financiera logramos tomar mejores decisiones estratégicas para el futuro de nuestra compañía."</p>
       <h4>- Laura Gómez, Directora Financiera</h4>
     </div>
   </div>
-</section>
-
-
-<section class="rete-fuente">
-<h2>Calcule su Retención en la Fuente</h2>
-<form id="formulario">
-<label for="ingreso">Escriba el valor de su ingreso.</label>
-<br>
-<input type="number" name="ingreso" id="ingreso">
-<br>
-<label for="deducciones">deducciones</label>
-<br>
-<input type="number" name="deducciones" id="deducciones">
-<br>
-<input type="button" value="calcular" id="calcular">
-
-
-
-
-
-</form>
-  <div id="resultado"></div>
-
-
-
-
-
 </section>
 
 <footer>
@@ -130,19 +155,14 @@
 
   <!-- Footer inferior -->
   <div class="footer-bottom">
-    <p>&copy; 2025 cava. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Cava. Todos los derechos reservados.</p>
   </div>
 </footer>
-
-
-    
-
 
 <a href="https://wa.me/5730223521216" target="_blank" class="whatsapp-float">
     <i class="fab fa-whatsapp"></i>
 </a>
 
-
-    <script src="js.js"></script>
+<script src="js.js"></script>
 </body>
 </html>
