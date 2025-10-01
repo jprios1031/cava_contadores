@@ -92,3 +92,81 @@ botonPrima.addEventListener("click", function () {
    })}</p>
   `;
 });
+
+c; // ===== Carrusel Servicios =====
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.querySelector(".carousel");
+  const cards = document.querySelectorAll(".service-card");
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+
+  let currentIndex = 0;
+  const totalCards = cards.length;
+
+  // Función para actualizar el slide
+  function updateCarousel() {
+    const offset = -currentIndex * (cards[0].offsetWidth + 32); // ancho + gap
+    carousel.style.transform = `translateX(${offset}px)`;
+  }
+
+  // Botón siguiente
+  nextBtn.addEventListener("click", () => {
+    if (currentIndex < totalCards - 1) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  // Botón anterior
+  prevBtn.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+  // Swipe con mouse/touch
+  let startX = 0;
+  let isDragging = false;
+
+  carousel.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.pageX;
+  });
+
+  carousel.addEventListener("mouseup", (e) => {
+    if (!isDragging) return;
+    const endX = e.pageX;
+    handleSwipe(startX, endX);
+    isDragging = false;
+  });
+
+  carousel.addEventListener("mouseleave", () => {
+    isDragging = false;
+  });
+
+  carousel.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  carousel.addEventListener("touchend", (e) => {
+    const endX = e.changedTouches[0].clientX;
+    handleSwipe(startX, endX);
+  });
+
+  function handleSwipe(start, end) {
+    const diff = start - end;
+    if (diff > 50 && currentIndex < totalCards - 1) {
+      // Swipe izquierda
+      currentIndex++;
+      updateCarousel();
+    } else if (diff < -50 && currentIndex > 0) {
+      // Swipe derecha
+      currentIndex--;
+      updateCarousel();
+    }
+  }
+
+  // Ajustar si se cambia el tamaño de pantalla
+  window.addEventListener("resize", updateCarousel);
+});

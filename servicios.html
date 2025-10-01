@@ -1,121 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <title>Servicios</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios</title>
+  
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style_servicios.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-      <div class="main-content"></div>
-    <header class="cabeza">
-        <div  class="logo">
-            <img src="imagenes/logo.jpg" alt="Logo CAVA">
-        </div>
-         <div class="hamburguesa" id="menu-btn">
-        <span></span>
-        <span></span>
-        <span></span>
+  
+  <!-- Header -->
+ <header class="cabeza">
+    <div class="logo">
+      <img src="imagenes/logo.jpg" alt="Logo CAVA">
     </div>
-        <nav>
-            <ul id="menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-     <section class="servicios">
-    <h2>Nuestros Servicios</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>Contabilidad</h3>
-            <p>Gestión integral de tu contabilidad con precisión y cumplimiento normativo.</p>
-        </div>
-        <div class="card">
-            <h3>Asesoría Tributaria</h3>
-            <p>Planeación fiscal y asesoría para optimizar tus recursos.</p>
-        </div>
-        <div class="card">
-            <h3>Planeación Financiera</h3>
-            <p>Proyecciones y estrategias para el crecimiento de tu empresa.</p>
-        </div>
-           <div class="card">
-            <h3>Planeación Financiera</h3>
-            <p>Proyecciones y estrategias para el crecimiento de tu empresa.</p>
-        </div>
-           <div class="card">
-            <h3>Planeación Financiera</h3>
-            <p>Proyecciones y estrategias para el crecimiento de tu empresa.</p>
-        </div>
-           <div class="card">
-            <h3>Planeación Financiera</h3>
-            <p>Proyecciones y estrategias para el crecimiento de tu empresa.</p>
-        </div>
-           <div class="card">
-            <h3>Planeación Financiera</h3>
-            <p>Proyecciones y estrategias para el crecimiento de tu empresa.</p>
-        </div>
-           <div class="card">
-            <h3>Planeación Financiera</h3>
-            <p>Proyecciones y estrategias para el crecimiento de tu empresa.</p>
-        </div>
+    <div class="hamburguesa" id="menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-</section>
-<footer>
-  <div class="footer-container">
+    <nav>
+      <ul id="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Sección 1: Redes sociales -->
-    <div class="footer-section">
-      <h3>Síguenos</h3>
-      <div class="redes-sociales-footer">
-        <a href="https://www.facebook.com/tu_usuario" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/tu_usuario" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/tu_usuario" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://wa.me/5730223521216" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+
+
+
+
+ <!-- Servicios -->
+<section class="servicios">
+  <h1>Nuestros Servicios</h1>
+  
+  <div class="carrusel">
+    <button class="carrusel-btn prev"><i class="fas fa-chevron-left"></i></button>
+    
+    <div class="carrusel-track">
+      <div class="card">
+        <i class="fas fa-calculator"></i>
+        <h3>Contabilidad</h3>
+        <p>Gestión integral de tu contabilidad con precisión y cumplimiento normativo.</p>
+        <a href="contacto.html" class="btn-card">Solicitar información</a>
+      </div>
+      
+      <div class="card">
+        <i class="fas fa-balance-scale"></i>
+        <h3>Asesoría Tributaria</h3>
+        <p>Planeación fiscal y asesoría para optimizar tus recursos y evitar sanciones.</p>
+        <a href="contacto.html" class="btn-card">Solicitar información</a>
+      </div>
+      
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Planeación Financiera</h3>
+        <p>Proyecciones y estrategias para el crecimiento de tu empresa.</p>
+        <a href="contacto.html" class="btn-card">Solicitar información</a>
+      </div>
+      
+      <div class="card">
+        <i class="fas fa-file-invoice-dollar"></i>
+        <h3>Declaración de Renta</h3>
+        <p>Asesoría y preparación de tu declaración de renta con confianza y seguridad.</p>
+        <a href="contacto.html" class="btn-card">Solicitar información</a>
+      </div>
+  
+      <div class="card">
+        <i class="fas fa-users-cog"></i>
+        <h3>Nómina y Seguridad Social</h3>
+        <p>Gestión eficiente de nómina y aportes para tu equipo de trabajo.</p>
+        <a href="contacto.html" class="btn-card">Solicitar información</a>
+      </div>
+      
+      <div class="card">
+        <i class="fas fa-search-dollar"></i>
+        <h3>Auditoría Contable</h3>
+        <p>Revisión y análisis detallado para garantizar transparencia y control.</p>
+        <a href="contacto.html" class="btn-card">Solicitar información</a>
+      </div>
+    </div><!-- fin carrusel-track -->
+
+    <button class="carrusel-btn next"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</section>
+<div class="animacion">
+  <div class="animacion-container">
+    <div class="linea"></div>
+    <div class="numeros">
+      <span>CAVA CONTABILIDAD LEGAL</span>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      
+      <!-- Redes sociales -->
+      <div class="footer-section">
+        <h3>Síguenos</h3>
+        <div class="redes-sociales-footer">
+          <a href="https://www.facebook.com/tu_usuario" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/tu_usuario" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/tu_usuario" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/5730223521216" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      
+      <!-- Contacto -->
+      <div class="footer-section">
+        <h3>Contacto</h3>
+        <p>Email: info@miempresa.com</p>
+        <p>Teléfono: +57 302 235 21216</p>
+        <p>Dirección: Pereira, Risaralda</p>
+      </div>
+      
+      <!-- Enlaces -->
+      <div class="footer-section">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
       </div>
     </div>
-
-    <!-- Sección 2: Contacto -->
-    <div class="footer-section">
-      <h3>Contacto</h3>
-      <p>Email: info@miempresa.com</p>
-      <p>Teléfono: +57 302 235 21216</p>
-      <p>Dirección: Pereira, Risaralda</p>
-    </div>
-
-    <!-- Sección 3: Enlaces -->
-    <div class="footer-section">
-      <h3>Enlaces</h3>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <!-- Footer inferior -->
-  <div class="footer-bottom">
-    <p>&copy; 2025 cava. Todos los derechos reservados.</p>
-  </div>
-</footer>
-
-
     
+    <!-- Footer inferior -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 CAVA. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
-
-<a href="https://wa.me/5730223521216" target="_blank" class="whatsapp-float">
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/5730223521216" target="_blank" class="whatsapp-float">
     <i class="fab fa-whatsapp"></i>
-</a>
+  </a>
 
-
-    <script src="js.js"></script>
-
+  <!-- Script -->
+  <script src="js.js"></script>
 </body>
 </html>

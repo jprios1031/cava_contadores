@@ -1,0 +1,302 @@
+/* ========= ESTILOS GLOBALES ========= */
+body {
+  background: linear-gradient(to top, white, #66a3ff, #004AAD);
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content { flex: 1; }
+
+/* ========= HEADER ========= */
+.cabeza {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+header .logo img { height: 100px; }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  gap: 50px;
+}
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* ========= SERVICIOS ========= */
+.servicios {
+  text-align: center;
+  padding: 50px 20px;
+}
+.servicios h1 {
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  min-width: 250px;
+}
+.card i {
+  font-size: 40px;
+  color: #004aad;
+  margin-bottom: 15px;
+}
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: #222;
+}
+.card p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.btn-card {
+  display: inline-block;
+  background: #004aad;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.btn-card:hover { background: #003580; }
+
+/* Carrusel */
+.carrusel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  overflow: hidden;
+}
+.carrusel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+.carrusel-btn {
+  background: rgba(0, 74, 173, 0.8);
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.carrusel-btn:hover { background: #003080; }
+
+/* ========= FOOTER ========= */
+footer {
+  color: #000;
+  padding: 40px 20px 20px 20px;
+}
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-section {
+  text-align: left;
+  flex: 1 1 250px;
+  min-width: 200px;
+}
+.footer-section h3 { margin-bottom: 15px; }
+.footer-section ul { list-style: none; padding: 0; }
+.footer-section ul li { margin-bottom: 10px; }
+.footer-section ul li a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-section ul li a:hover { color: #004AAD; }
+.redes-sociales-footer a {
+  color: #000;
+  margin-right: 15px;
+  font-size: 24px;
+  transition: transform 0.3s, color 0.3s;
+}
+.redes-sociales-footer a:hover {
+  transform: scale(1.2);
+  color: #004AAD;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* ========= BOTÓN WHATSAPP ========= */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  z-index: 100;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+}
+.whatsapp-float i { line-height: 60px; }
+
+/* ========= MENÚ HAMBURGUESA ========= */
+.hamburguesa {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+}
+.hamburguesa span {
+  display: block;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+.hamburguesa.active span:nth-child(1){
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburguesa.active span:nth-child(2){ opacity: 0; }
+.hamburguesa.active span:nth-child(3){
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ========= MEDIA QUERIES ========= */
+@media (max-width: 992px) {
+  nav ul { gap: 20px; }
+}
+@media (max-width: 768px) {
+  header.cabeza {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+    display: none;
+  }
+  nav ul.active { display: flex; }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-section {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .hamburguesa { display: flex; }
+}
+
+
+
+/* ========= CONTENEDOR PRINCIPAL ========= */
+.animacion-container {
+  position: relative;
+  width: 100%;
+  height: 200px; /* más espacio para el rebote */
+  overflow: hidden;
+
+  border-bottom: 2px solid #004aad;
+ 
+}
+
+/* ========= LINEA INFERIOR ========= */
+.linea {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #004aad;
+}
+
+/* ========= TEXTO EN MOVIMIENTO ========= */
+.numeros {
+  display: flex;
+  gap: 120px; /* espacio entre repeticiones */
+  position: absolute;
+  bottom: 50px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #004aad;
+  animation: correr 25s linear infinite; /* más lento */
+  white-space: nowrap;
+}
+
+/* ========= REBOTE INDIVIDUAL ========= */
+.numeros span {
+  display: inline-block;
+  animation: rebote 1s ease-in-out infinite; /* cada letra rebota cada 2s */
+}
+
+/* ========= MOVIMIENTO HORIZONTAL ========= */
+@keyframes correr {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* ========= EFECTO DE REBOTE ========= */
+@keyframes rebote {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+}
+
+
+
+
+
+
